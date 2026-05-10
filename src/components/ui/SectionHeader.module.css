@@ -1,0 +1,40 @@
+.header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.left {
+  text-align: left;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 68px);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  margin: 16px 0 18px;
+}
+
+/* Gold italic inside titles: <em> */
+.title em {
+  font-style: italic;
+  background: linear-gradient(135deg, var(--gold), var(--champagne));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(253,247,238,0.45);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.left .subtitle {
+  margin: 0;
+}

@@ -1,0 +1,227 @@
+/* ── OUTER SHELL (double-bezel) ── */
+.bezel {
+  background: rgba(253,247,238,0.03);
+  border: 1px solid rgba(253,247,238,0.06);
+  border-radius: var(--radius-lg);
+  padding: 5px;
+  transition:
+    transform 0.5s var(--ease-expo),
+    box-shadow 0.5s var(--ease-expo);
+}
+
+.bezel:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 32px 80px rgba(0,0,0,0.7),
+    0 0 0 1px rgba(201,151,58,0.2);
+}
+
+/* ── INNER CORE ── */
+.card {
+  border-radius: calc(var(--radius-lg) - 5px);
+  overflow: hidden;
+  background: var(--bark);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+/* ── IMAGE ── */
+.imgWrap {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.8s var(--ease-expo), filter 0.5s ease;
+  /* Brillo blanco permanente alrededor del producto */
+  filter: 
+    drop-shadow(0 0 12px rgba(255, 255, 255, 0.45))
+    drop-shadow(0 10px 25px rgba(0,0,0,0.3));
+}
+
+.bezel:hover .img {
+  transform: scale(1.05);
+  /* Mantenemos el brillo y solo ajustamos la sombra de profundidad */
+  filter: 
+    drop-shadow(0 0 15px rgba(255, 255, 255, 0.5))
+    drop-shadow(0 15px 35px rgba(0,0,0,0.4));
+}
+
+.imgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(44,26,16,0.55) 75%,
+    rgba(44,26,16,0.95) 100%
+  );
+}
+
+.badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-family: var(--font-condensed);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: rgba(8,5,3,0.8);
+  border: 1px solid rgba(201,151,58,0.4);
+  color: var(--champagne);
+}
+
+/* ── BODY & HEADER ── */
+.header {
+  padding: 22px 22px 18px;
+  background: linear-gradient(to bottom, rgba(253,247,238,0.03), transparent);
+}
+
+.body {
+  padding: 22px;
+}
+
+.tag {
+  font-family: var(--font-condensed);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--cream);
+}
+
+/* ── Benefits ── */
+.benefitsSection {
+  margin-bottom: 24px;
+}
+
+.benefits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: rgba(253,247,238,0.8);
+}
+
+.check {
+  flex: 0 0 auto;
+  font-family: var(--font-condensed);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ── Info Section (Prep & Prices) ── */
+.infoSection {
+  background: rgba(253,247,238,0.03);
+  border: 1px solid rgba(253,247,238,0.1);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.infoTitle {
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.priceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.priceItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.priceLabel {
+  font-family: var(--font-condensed);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(253,247,238,0.5);
+  text-transform: uppercase;
+}
+
+.priceValue {
+  font-family: var(--font-condensed);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.singlePrice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+
+/* ── Highlighted Prep Note ── */
+.prepHighlight {
+  background: rgba(201,151,58,0.1);
+  border: 1px solid rgba(201,151,58,0.3);
+  border-radius: var(--radius-sm);
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.prepText {
+  font-family: var(--font-condensed);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  margin: 0;
+}
+
+.footer {
+  margin-top: auto;
+}
