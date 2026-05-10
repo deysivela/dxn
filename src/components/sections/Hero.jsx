@@ -18,7 +18,7 @@ export default function Hero() {
         {/* ── LEFT: Copy ── */}
         <div className={styles.left}>
           <h1 className={`${styles.h1} reveal d1 ${vis ? 'vis' : ''}`}>
-            Disfruta lo mejor,<br />
+            Disfruta,<br />
           </h1>
 
           <span className={`${styles.bigWord} reveal d2 ${vis ? 'vis' : ''}`}>
