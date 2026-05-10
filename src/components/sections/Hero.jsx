@@ -22,7 +22,7 @@ export default function Hero() {
           </h1>
 
           <span className={`${styles.bigWord} reveal d2 ${vis ? 'vis' : ''}`}>
-            Frappuccinos
+            Frapuchinos
           </span>
 
           <div className={`${styles.pills} reveal d3 ${vis ? 'vis' : ''}`}>

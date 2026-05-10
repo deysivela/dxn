@@ -3,7 +3,7 @@ import styles from './Footer.module.css'
 const COLS = [
   {
     heading: 'Productos',
-    links: ['Frappuccinos', 'Cafés Calientes', 'Malteadas', 'Suplementos'],
+    links: ['Frapuchinos', 'Cafés Calientes', 'Malteadas', 'Suplementos'],
   },
   {
     heading: 'Empresa',
