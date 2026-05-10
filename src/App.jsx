@@ -1,6 +1,7 @@
 import Navbar         from './components/layout/Navbar'
 import Footer         from './components/layout/Footer'
 import HomePage       from './pages/HomePage'
+import WhatsAppFloat  from './components/ui/WhatsAppFloat'
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
         <HomePage />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </>
   )
 }
