@@ -1,8 +1,8 @@
 import styles from './WhatsAppFloat.module.css'
 
 const DEFAULT_HREF =
-  'https://wa.me/56976683808?text=' +
-  encodeURIComponent('Hola, me interesa información sobre los Productos DXN')
+  'https://wa.me/59164546058?text=' +
+  encodeURIComponent('Hola, me interesa información sobre DXN 🌿')
 
 export default function WhatsAppFloat({ href = DEFAULT_HREF }) {
   return (

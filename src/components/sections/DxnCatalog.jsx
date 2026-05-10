@@ -6,9 +6,9 @@ import Button from '../ui/Button'
 import styles from './DxnCatalog.module.css'
 
 const PARTNER_WHATSAPP =
-  'https://wa.me/56976683808?text=' +
+  'https://wa.me/59164546058?text=' +
   encodeURIComponent(
-    'Hola, quiero ser socio DXN para acceder a precios de mayorista 🌿'
+    'Hola, quiero ser socio DXN para acceder a precios de mayorista'
   )
 
 export default function DxnCatalog() {
@@ -55,7 +55,7 @@ export default function DxnCatalog() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                💬 Quiero ser socio
+                 Quiero ser socio
               </Button>
             </div>
           </div>
