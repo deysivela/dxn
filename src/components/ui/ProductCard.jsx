@@ -30,7 +30,7 @@ export default function ProductCard({ product, delay = '', visible = false }) {
             loading="lazy"
           />
           <div className={styles.imgOverlay} />
-          <span className={styles.badge}>{badge}</span>
+          {badge && <span className={styles.badge}>{badge}</span>}
         </div>
 
         {/* ── Body ── */}
@@ -49,33 +49,10 @@ export default function ProductCard({ product, delay = '', visible = false }) {
             </div>
           )}
 
-          {/* ── Prep & Price Section ── */}
-          <div className={styles.infoSection}>
-            <h4 className={styles.infoTitle}>Preparación y precios</h4>
-
-            <div className={styles.priceContainer}>
-              {prices ? (
-                <div className={styles.priceGrid}>
-                  <div className={styles.priceItem}>
-                    <span className={styles.priceLabel}>Sobre completo</span>
-                    <span className={styles.priceValue}>{prices.full}</span>
-                  </div>
-                  <div className={styles.priceItem}>
-                    <span className={styles.priceLabel}>Medio sobre</span>
-                    <span className={styles.priceValue}>{prices.half}</span>
-                  </div>
-                </div>
-              ) : (
-                <div className={styles.singlePrice}>
-                  <span className={styles.priceLabel}>Precio</span>
-                  <span className={styles.priceValue}>{price}</span>
-                </div>
-              )}
-            </div>
-
-            <div className={styles.prepHighlight}>
-              <p className={styles.prepText}>Sirven frío o caliente</p>
-            </div>
+          {/* ── Price Section ── */}
+          <div className={styles.priceSection}>
+            <span className={styles.priceLabel}>Precio</span>
+            <span className={styles.priceValue} style={{ color: accent }}>{price}</span>
           </div>
         </div>
 

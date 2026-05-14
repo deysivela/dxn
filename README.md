@@ -44,8 +44,6 @@ dxn-landing/
 │   │   ├── layout/
 │   │   │   ├── Navbar.jsx       # Navbar flotante pill + menú móvil
 │   │   │   ├── Navbar.module.css
-│   │   │   ├── Footer.jsx       # Footer con columnas y redes
-│   │   │   └── Footer.module.css
 │   │   │
 │   │   └── sections/
 │   │       ├── Hero.jsx         # Hero con copas en Z-axis cascade
@@ -73,7 +71,7 @@ dxn-landing/
 │   │   ├── global.css           # Reset, design tokens CSS, fuentes
 │   │   └── animations.css       # Keyframes y clases .reveal / .vis
 │   │
-│   ├── App.jsx                  # Root: Navbar + HomePage + Footer
+│   ├── App.jsx                  # Root: Navbar + HomePage
 │   └── main.jsx                 # Entry point React
 │
 ├── index.html

@@ -17,34 +17,34 @@ export default function Hero() {
 
         {/* ── LEFT: Copy ── */}
         <div className={styles.left}>
-          <h1 className={`${styles.h1} reveal d1 ${vis ? 'vis' : ''}`}>
-            Disfruta,<br />
-          </h1>
-
-          <span className={`${styles.bigWord} reveal d2 ${vis ? 'vis' : ''}`}>
-            Frapuchinos
-          </span>
-
-          <div className={`${styles.pills} reveal d3 ${vis ? 'vis' : ''}`}>
-            <span className={styles.pill}>☕ Café Caliente</span>
-            <span className={styles.pill}>☕ Café Natural</span>
-            <span className={styles.pill}>❄️ Café Frias</span>
+          <div className={`${styles.eyebrowWrap} reveal d1 ${vis ? 'vis' : ''}`}>
+            <span className={styles.eyebrow}>Cafetería DXN · Bolivia</span>
           </div>
 
+          <h1 className={`${styles.h1} reveal d2 ${vis ? 'vis' : ''}`}>
+            Café con <br />
+            <span className={styles.accentText}>ganoderma</span>
+          </h1>
+
           <p className={`${styles.subtitle} reveal d3 ${vis ? 'vis' : ''}`}>
-            Sabor · Bienestar · Energía. Cada sorbo es una fusión de ciencia
-            natural y tradición ancestral — potenciada por el poder del
-            Ganoderma Lingzhi.
+            Frapuchinos fríos, cafés calientes y malteadas hechos con Ganoderma
+            Lingzhi. Una pausa que te despierta y te cuida al mismo tiempo.
           </p>
 
           <div className={`${styles.actions} reveal d4 ${vis ? 'vis' : ''}`}>
-            <Button href="#dxn-catalogo" size="lg" icon="↗">
+            <Button href="#productos" size="lg" icon="→">
               Ver Productos
             </Button>
-            <Button href="#beneficios" variant="ghost" size="lg">
-              Conocer Beneficios →
+            <Button href="#beneficios" variant="ghost" size="lg" icon="→">
+              conocer beneficios
             </Button>
           </div>
+
+          <ul className={`${styles.metaList} reveal d5 ${vis ? 'vis' : ''}`} aria-label="Categorías">
+            <li className={styles.metaItem}><span className={styles.metaDot} /> Frapuchinos fríos</li>
+            <li className={styles.metaItem}><span className={styles.metaDot} /> Cafés calientes</li>
+            <li className={styles.metaItem}><span className={styles.metaDot} /> Malteadas vitales</li>
+          </ul>
         </div>
 
         {/* ── RIGHT: Stacked cups ── */}
@@ -56,16 +56,21 @@ export default function Hero() {
                 key={i}
                 className={`${styles.cup} ${styles[`cup${i}`]}`}
               >
-                <img
-                  src={cup.img}
-                  alt={cup.label}
-                  className={styles.cupImg}
-                  loading="eager"
-                  onError={e => {
-                    e.target.src = 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80'
-                  }}
-                />
-                <span className={styles.cupLabel}>{cup.label}</span>
+                <div className={styles.cupInner}>
+                  <img
+                    src={cup.img}
+                    alt={cup.label}
+                    className={styles.cupImg}
+                    loading="eager"
+                    onError={e => {
+                      e.target.src = '/img/capuchino.png'
+                    }}
+                  />
+                  <div className={styles.cupOverlay}>
+                    <span className={styles.cupTagline}>{cup.tagline}</span>
+                    <span className={styles.cupLabel}>{cup.label}</span>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

@@ -3,7 +3,7 @@ import styles from './Navbar.module.css'
 import Button from '../ui/Button'
 
 const NAV_LINKS = [
-  { label: 'Productos',   href: '#dxn-catalogo' },
+  { label: 'Productos',   href: '#productos' },
   { label: 'Beneficios',  href: '#beneficios'   },
   { label: 'Contacto',    href: '#cta'          },
 ]
@@ -31,7 +31,9 @@ export default function Navbar() {
     <>
       <nav className={`${styles.pill} ${scrolled ? styles.scrolled : ''}`}>
         {/* Logo */}
-        <a href="#" className={styles.logo} onClick={closeMenu}>DXN</a>
+        <a href="#" className={styles.logo} onClick={closeMenu}>
+          <img src="/img/Dxn_logo.png" alt="DXN Logo" className={styles.logoImg} />
+        </a>
 
         {/* Desktop links */}
         <ul className={styles.links}>

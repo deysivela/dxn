@@ -43,8 +43,9 @@
 }
 
 .bezel:hover .icon {
-  background: rgba(201,151,58,0.2);
-  transform: scale(1.1) rotate(-5deg);
+  background: rgba(201,151,58,0.18);
+  border-color: rgba(201,151,58,0.32);
+  transform: scale(1.05);
 }
 
 /* ── TEXT ── */

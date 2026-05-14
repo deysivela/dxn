@@ -1,20 +1,19 @@
-import { useReveal } from '../../hooks/useReveal'
 import { BENEFITS } from '../../data/benefits'
 import BenefitCard from '../ui/BenefitCard'
 import SectionHeader from '../ui/SectionHeader'
 import styles from './Benefits.module.css'
 
 export default function Benefits() {
-  const [ref, vis] = useReveal(0.08)
+  const vis = true
 
   return (
     <section className={styles.section} id="beneficios">
       <div className={styles.orb} aria-hidden="true" />
 
-      <div ref={ref} style={{ position: 'relative', zIndex: 1 }}>
+      <div style={{ position: 'relative', zIndex: 1 }}>
         <SectionHeader
-          title={<>Beneficios que <em>sientes</em></>}
-          subtitle="No es solo una bebida. Es un bienestar respaldado por décadas de investigación en hongos medicinales de clase mundial."
+          title={<>Por qué <em>Ganoderma</em></>}
+          subtitle="DXN cultiva sus propios hongos medicinales bajo estándares GMP en Malasia. Esto es lo que un consumo regular puede aportarte."
           visible={vis}
         />
 
@@ -23,7 +22,7 @@ export default function Benefits() {
             <BenefitCard
               key={benefit.title}
               benefit={benefit}
-              delay={`d${Math.min(i + 1, 6)}`}
+              delay=""
               visible={vis}
             />
           ))}

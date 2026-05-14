@@ -15,7 +15,8 @@ export default function Location() {
     <section className={styles.section} id="ubicacion">
       <div ref={ref} className={styles.container}>
         <SectionHeader
-          title={<>Nuestra <em>Ubicación</em></>}
+          title={<>Visítanos en <em>Santa Cruz</em></>}
+          subtitle="Pásate por la cafetería para probar el menú o coordina retiro de productos."
           visible={vis}
         />
 
@@ -26,24 +27,33 @@ export default function Location() {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Ubicación DXN"
+            title="Ubicación de la cafetería DXN en Santa Cruz, Bolivia"
           ></iframe>
-          
+
           <div className={styles.infoCard}>
             <div className={styles.infoItem}>
-              <span className={styles.icon}>📍</span>
+              <span className={styles.icon} aria-hidden="true">📍</span>
               <div>
-                <h4 className={styles.infoTitle}>Dirección</h4>
+                <h4 className={styles.infoTitle}>Cafetería DXN</h4>
+                <p className={styles.infoText}>Santa Cruz de la Sierra, Bolivia</p>
               </div>
             </div>
-            
-            <a 
-              href={`https://www.google.com/maps?q=${lat},${lng}`} 
-              target="_blank" 
+
+            <div className={styles.infoItem}>
+              <span className={styles.icon} aria-hidden="true">🕒</span>
+              <div>
+                <h4 className={styles.infoTitle}>Horario</h4>
+                <p className={styles.infoText}>Lun a sáb · 8:00 a 20:00</p>
+              </div>
+            </div>
+
+            <a
+              href={`https://www.google.com/maps?q=${lat},${lng}`}
+              target="_blank"
               rel="noopener noreferrer"
               className={styles.mapBtn}
             >
-              Abrir en Google Maps
+              Cómo llegar
             </a>
           </div>
         </div>

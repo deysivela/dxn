@@ -80,17 +80,17 @@
 }
 
 .sub {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
-  line-height: 1.8;
-  color: rgba(253,247,238,0.5);
-  max-width: 440px;
-  margin-bottom: 52px;
+  line-height: 1.7;
+  color: rgba(253,247,238,0.6);
+  max-width: 520px;
+  margin-bottom: 44px;
 }
 
 .actions {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
 }

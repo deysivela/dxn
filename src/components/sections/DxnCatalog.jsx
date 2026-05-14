@@ -25,6 +25,34 @@ export default function DxnCatalog() {
           visible={vis}
         />
 
+        {/* ── Membership Banner (New) ── */}
+        <div className={`${styles.membership} reveal d1 ${vis ? 'vis' : ''}`}>
+          <div className={styles.membershipInner}>
+            <div className={styles.membershipLeft}>
+              <span className={styles.membershipBadge}>Membresía Exclusiva</span>
+              <h2 className={styles.membershipTitle}>
+                Hazte <em>socio DXN</em> y accede a precios de mayorista
+              </h2>
+              <p className={styles.membershipText}>
+                Únete a nuestra comunidad y disfruta de descuentos exclusivos desde tu primera compra. 
+                Calidad premium al mejor precio garantizado.
+              </p>
+            </div>
+            <div className={styles.membershipRight}>
+              <Button
+                href={PARTNER_WHATSAPP}
+                size="lg"
+                icon="→"
+                rel="noopener noreferrer"
+                target="_blank"
+                className={styles.membershipBtn}
+              >
+                 Ser Socio Ahora
+              </Button>
+            </div>
+          </div>
+        </div>
+
         <div className={styles.grid}>
           {DXN_CATALOG.map((product, i) => (
             <ProductCard

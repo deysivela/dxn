@@ -66,6 +66,52 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tabular numerals everywhere prices, stats and times appear */
+.tnum,
+[class*="price"],
+[class*="Price"] {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Display text balances cleanly across breakpoints */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Visible focus ring for keyboard nav */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip-to-content link for keyboard users */
+.skipLink {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 9999;
+  background: var(--gold);
+  color: var(--black);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-family: var(--font-condensed);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: top 0.2s ease;
+}
+.skipLink:focus {
+  top: 16px;
 }
 
 /* Film-grain overlay — fixed, GPU-safe, pointer-events-none */

@@ -1,33 +1,33 @@
 export const BENEFITS = [
   {
     icon: "⚡",
-    title: "Energía Natural",
-    desc: "Sin picos ni caídas. Energía estable durante 8+ horas gracias a adaptógenos certificados.",
+    title: "Energía estable",
+    desc: "Adaptógenos del Ganoderma Lingzhi sostienen el día sin el bajón típico del café común.",
   },
   {
     icon: "🛡️",
-    title: "Sistema Inmune",
-    desc: "Beta-glucanos del Ganoderma Lingzhi fortalecen tus defensas desde la raíz celular.",
+    title: "Defensas más fuertes",
+    desc: "Los beta-glucanos del Lingzhi apoyan al sistema inmune desde el uso diario.",
   },
   {
     icon: "🧠",
-    title: "Claridad Mental",
-    desc: "Mejora el foco y la concentración. Ideal para trabajo de alto impacto y creatividad.",
+    title: "Foco y memoria",
+    desc: "Lion's Mane y Cordyceps ayudan a mantener la concentración en jornadas largas.",
   },
   {
     icon: "🌿",
-    title: "Detox Profundo",
-    desc: "Antioxidantes premium que neutralizan radicales libres y apoyan la salud hepática.",
+    title: "Antioxidantes",
+    desc: "Triterpenos y polisacáridos que ayudan a balancear el estrés oxidativo del día a día.",
   },
   {
     icon: "💪",
-    title: "Rendimiento Físico",
-    desc: "Cordyceps mejora la oxigenación muscular para atletas y personas activas.",
+    title: "Mejor rendimiento",
+    desc: "Cordyceps apoya la oxigenación muscular si entrenas o tienes un trabajo físico.",
   },
   {
     icon: "✨",
-    title: "Bienestar Integral",
-    desc: "Fórmula holística que cuida cuerpo, mente y espíritu desde adentro hacia afuera.",
+    title: "Bienestar diario",
+    desc: "Una rutina simple: una taza al día, integrada al desayuno o la pausa de la tarde.",
   },
 ]
 

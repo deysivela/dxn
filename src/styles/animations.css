@@ -2,11 +2,8 @@
    SCROLL REVEAL
 ═══════════════════════════════════════ */
 .reveal {
-  opacity: 0;
-  transform: translateY(36px);
-  transition:
-    opacity 1s var(--ease-expo),
-    transform 1s var(--ease-expo);
+  opacity: 1;
+  transform: none;
 }
 .reveal.vis {
   opacity: 1;
